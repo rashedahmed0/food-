@@ -15,8 +15,8 @@
 
 <body>
     <!-- header section -->
-    <header>
-        <div class="navbar flex justify-between w-[90%] mx-auto ">
+    <header class="shadow-sm">
+        <div class="navbar flex justify-between w-[90%] mx-auto  ">
             <div class="flex flex-row-reverse w-full lg:w-[20%] justify-between items-center ">
                 <div class="dropdown flex justify-end flex-row-reverse items-center">
 
@@ -28,33 +28,32 @@
                         </svg>
                     </div>
                     <ul tabindex="0"
-                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-[250px] w-52 p-2 shadow absulate right-0">
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-[275px] w-52 p-2 shadow absulate right-0">
                         <li><a>Home </a></li>
                         <li><a>About</a></li>
                         <li><a>Menu </a></li>
                         <li><a>Event</a></li>
                         <li><a>Chef's</a></li>
                         <li><a>Contact</a></li>
+                        <button class=" lg:hidden flex py-2 px-5  rounded-3xl text-md text-white bg-[#ce1212]">Book
+                            a
+                            Table</button>
                     </ul>
-
-                    <div class="">
-                        <button class="lg:hidden  flex mr-5">Book a Table</button>
-                    </div>
                 </div>
-                <a class="text-xl ">daisyUI</a>
+                <a class="text-3xl font-bold">YUMMY <span class="text-[#ce1212]">.</span></a>
             </div>
             <div class="hidden lg:flex">
                 <ul class="menu menu-horizontal px-1">
-                    <li><a>Home </a></li>
-                    <li><a>About</a></li>
-                    <li><a>Menu </a></li>
-                    <li><a>Event</a></li>
-                    <li><a>Chef's</a></li>
-                    <li><a>Contact</a></li>
+                    <li><a class="text-md mx-3">Home </a></li>
+                    <li><a class="text-md mx-3">About</a></li>
+                    <li><a class="text-md mx-3">Menu </a></li>
+                    <li><a class="text-md mx-3">Event</a></li>
+                    <li><a class="text-md mx-3">Chef's</a></li>
+                    <li><a class="text-md mx-3">Contact</a></li>
 
                 </ul>
-                <button>Book a Table</button>
             </div>
+            <button class="hidden lg:flex py-2 px-9 rounded-3xl text-lg text-white bg-[#ce1212]">Book a Table</button>
 
         </div>
     </header>
