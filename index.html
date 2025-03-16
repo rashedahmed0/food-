@@ -22,14 +22,21 @@
 
         .brand-card:hover span {
             background: #ce1212;
-            /* background: #ffe9e9; */
-            color: white;
+            background: #ffe9e9;
+            /* color: #fc9696; */
             transition: 0.5s;
         }
 
         .brand-card:hover i {
             color: white;
             transition: 0.5s;
+            /* background: #ce1212; */
+        }
+
+        .brand-card:hover span {
+
+            transition: 0.5s;
+            background: #ce1212;
         }
     </style>
 
@@ -170,7 +177,8 @@
                 </div>
             </div>
             <div class="basis-[21%]  p-4 py-9 text-center brand-card  bg-white">
-                <span class="inline-flex justify-center items-center w-16 h-16 rounded-full bg-[#ffe9e9] ">
+                <span
+                    class="inline-flex justify-center items-center w-16 h-16 rounded-full bg-[#ffe9e9]  hover:bg-[#ce1212]">
 
                     <i class=" fa-solid fa-check-to-slot text-3xl text-[#ce1212]"></i>
                 </span>
@@ -181,7 +189,8 @@
                 </p>
             </div>
             <div class="basis-[21%]  p-4 py-9 text-center brand-card  bg-white">
-                <span class="inline-flex justify-center items-center w-16 h-16 rounded-full bg-[#ffe9e9]">
+                <span
+                    class="inline-flex justify-center items-center w-16 h-16 rounded-full bg-[#ffe9e9] hover:bg-[#ce1212]">
                     <i class=" fa-regular fa-gem text-3xl text-[#ce1212]"></i>
                 </span>
                 <h2 class="my-9 text-xl font-semibold">Ullamco laboris ladore lore pan</h2>
@@ -191,7 +200,8 @@
                 </p>
             </div>
             <div class="basis-[21%]  p-4 py-9 text-center brand-card  bg-white">
-                <span class="inline-flex justify-center items-center w-16 h-16 rounded-full bg-[#ffe9e9]  ">
+                <span
+                    class="inline-flex justify-center items-center w-16 h-16 rounded-full bg-[#ffe9e9]  hover:bg-[#ce1212] ">
                     <i class=" fa-solid fa-print text-3xl text-[#ce1212]"></i>
                 </span>
                 <h2 class="my-9 text-xl font-semibold">Labore consequatur incidid dolore</h2>
@@ -207,7 +217,7 @@
     <section class="details">
         <div class="hero" style="background-image: url(./img/stats-bg.jpg);">
             <div class="hero-overlay"></div>
-            <div class="flex justify-between w-[90%] mx-auto py-[100px] ">
+            <div class="flex justify-between w-[90%] mx-auto py-[150px] ">
                 <div class="flex-grow  text-white text-center">
                     <p class="text-3xl font-semibold ">232</p>
                     <p class="text-2xl font-semibold ">Clients</p>
@@ -223,6 +233,155 @@
                 <div class="flex-grow text-white text-center">
                     <p class="text-3xl font-semibold ">32</p>
                     <p class="text-2xl font-semibold ">Workers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- testimonial section  -->
+    <section class="testimonial py-[100px] bg-[#f2f2f2]">
+        <div class="mx-auto w-[90%] ">
+            <div class="title text-center  mb-[50px]">
+                <p class="text-xl text-[#777] ">TESTIMONIALS </p>
+                <h1 class="text-2xl  rock-salt-regular mt-3 ">What Are They <span class="text-[#ce1212]">Saying About
+                        Us</span>
+                </h1>
+            </div>
+            <div class="carousel w-full">
+                <div id="slide1" class="carousel-item relative w-full">
+                    <div class="w-[60%] mx-auto flex justify-between items-center gap-5">
+                        <div class="w-[65%] border-l-3 py-2  pl-3 border-[#ce1212]">
+                            <p class="italic"> <i class="fa-solid fa-quote-left text-3xl text-[#fc9696]"></i> Enim nisi
+                                quem export
+                                duis labore cillum quae
+                                magna enim sint quorum nulla quem veniam
+                                duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim. <i
+                                    class="fa-solid fa-quote-right text-3xl text-[#fc9696]"></i></p>
+                            <h1 class=" rock-salt-regular mt-2 mt-1">John Larson</h1>
+                            <h3 class="text-[#666]">Entrepreneur</h3>
+                            <div class="rating">
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                    aria-label="1 star" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                    aria-label="2 star" checked="checked" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                    aria-label="3 star" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                    aria-label="4 star" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                    aria-label="5 star" />
+                            </div>
+                        </div>
+                        <div class="">
+                            <img class="rounded-full w-[200px]" src="./img/testimonials/testimonials-1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                        <a href="#slide4" class="btn btn-circle">❮</a>
+                        <a href="#slide2" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide2" class="carousel-item relative w-full">
+                    <div class="w-[60%] mx-auto flex justify-between items-center gap-5">
+                        <div class="w-[65%] border-l-3 py-2  pl-3 border-[#ce1212]">
+                            <p class="italic"> <i class="fa-solid fa-quote-left text-3xl text-[#fc9696]"></i> Enim nisi
+                                quem export
+                                duis labore cillum quae
+                                magna enim sint quorum nulla quem veniam
+                                duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim. <i
+                                    class="fa-solid fa-quote-right text-3xl text-[#fc9696]"></i></p>
+                            <h1 class=" rock-salt-regular mt-2 mt-1">John Larson</h1>
+                            <h3 class="text-[#666]">Entrepreneur</h3>
+                            <div class="rating">
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                    aria-label="1 star" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                    aria-label="2 star" checked="checked" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                    aria-label="3 star" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                    aria-label="4 star" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                    aria-label="5 star" />
+                            </div>
+                        </div>
+                        <div class="">
+                            <img class="rounded-full w-[200px]" src="./img/testimonials/testimonials-2.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                        <a href="#slide1" class="btn btn-circle">❮</a>
+                        <a href="#slide3" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide3" class="carousel-item relative w-full">
+                    <div class="w-[60%] mx-auto flex justify-between items-center gap-5">
+                        <div class="w-[65%] border-l-3 py-2  pl-3 border-[#ce1212]">
+                            <p class="italic"> <i class="fa-solid fa-quote-left text-3xl text-[#fc9696]"></i> Enim nisi
+                                quem export
+                                duis labore cillum quae
+                                magna enim sint quorum nulla quem veniam
+                                duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim. <i
+                                    class="fa-solid fa-quote-right text-3xl text-[#fc9696]"></i></p>
+                            <h1 class=" rock-salt-regular mt-2 mt-1">Jena Karlis</h1>
+                            <h3 class="text-[#666]">Store Owner</h3>
+                            <div class="rating">
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                    aria-label="1 star" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                    aria-label="2 star" checked="checked" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                    aria-label="3 star" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                    aria-label="4 star" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                    aria-label="5 star" />
+                            </div>
+                        </div>
+                        <div class="">
+                            <img class="rounded-full w-[200px]" src="./img/testimonials/testimonials-3.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                        <a href="#slide2" class="btn btn-circle">❮</a>
+                        <a href="#slide4" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide4" class="carousel-item relative w-full">
+                    <div class="w-[60%] mx-auto flex justify-between items-center gap-5">
+                        <div class="w-[65%] border-l-3 py-2  pl-3 border-[#ce1212]">
+                            <p class="italic"> <i class="fa-solid fa-quote-left text-3xl text-[#fc9696]"></i> Enim nisi
+                                quem export
+                                duis labore cillum quae
+                                magna enim sint quorum nulla quem veniam
+                                duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim. <i
+                                    class="fa-solid fa-quote-right text-3xl text-[#fc9696]"></i></p>
+                            <h1 class=" rock-salt-regular mt-2 mt-1">Sara Wilsson</h1>
+                            <h3 class="text-[#666]">Designer</h3>
+                            <div class="rating">
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                    aria-label="1 star" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                    aria-label="2 star" checked="checked" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                    aria-label="3 star" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                    aria-label="4 star" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                    aria-label="5 star" />
+                            </div>
+                        </div>
+                        <div class="">
+                            <img class="rounded-full w-[200px]" src="./img/testimonials/testimonials-4.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                        <a href="#slide3" class="btn btn-circle">❮</a>
+                        <a href="#slide1" class="btn btn-circle">❯</a>
+                    </div>
                 </div>
             </div>
         </div>
