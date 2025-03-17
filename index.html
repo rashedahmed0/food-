@@ -23,7 +23,7 @@
         .brand-card:hover span {
             background: #ce1212;
             background: #ffe9e9;
-            /* color: #fc9696; */
+            /* color: #ffffffdc; */
             transition: 0.5s;
         }
 
@@ -37,6 +37,31 @@
 
             transition: 0.5s;
             background: #ce1212;
+        }
+
+        .chefs-card {
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .chefs-card:hover {
+            transform: scale(1.05);
+        }
+
+        .chefs-card:hover .chefs-social {
+            opacity: 1;
+            visibility: visible;
+            right: 15px;
+            top: 15px;
+        }
+
+        .chefs-social {
+            transition: right 0.4s;
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            right: 0;
+            top: 0;
         }
     </style>
 
@@ -385,6 +410,154 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- event section -->
+    <section class="event  ">
+        <div class="carousel w-full">
+            <div id="item1" class="carousel-item w-full">
+                <div class="hero w-full h-[450px] relative" style="background-image: url(./img/events-1.jpg);">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-content text-neutral-content absolute bottom-0 left-0 p-8">
+                        <div>
+                            <h3 class="text-md mb-3 rock-salt-regular ">COSTOM Parties</h3>
+                            <h1 class="text-4xl font-bold border-b-3 inline border-[#ce1212] px-2 mb-3">$899</h1>
+                            <p class="mt-2 ">
+                                Laborum aperiam atque omnis minus omnis est qui assumenda quos. <br> Quis id sit
+                                quibusdam.
+                                Esse quisquam ducimus officia ipsum ut quibusdam maxime. Non enim perspiciatis.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div id="item2" class="carousel-item w-full">
+                <div class="hero w-full h-[450px] relative" style="background-image: url(./img/events-2.jpg);">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-content text-neutral-content absolute bottom-0 left-0 p-8">
+                        <div>
+                            <h3 class="text-md mb-3 rock-salt-regular ">PRIVATE Parties</h3>
+                            <h1 class="text-4xl font-bold border-b-3 inline border-[#ce1212] px-2 mb-3">$899</h1>
+                            <p class="mt-2 ">
+                                Laborum aperiam atque omnis minus omnis est qui assumenda quos. <br> Quis id sit
+                                quibusdam.
+                                Esse quisquam ducimus officia ipsum ut quibusdam maxime. Non enim perspiciatis.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div id="item3" class="carousel-item w-full">
+                <div class="hero w-full h-[450px] relative" style="background-image: url(./img/events-3.jpg);">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-content text-neutral-content absolute bottom-0 left-0 p-8">
+                        <div>
+                            <h3 class="text-md mb-3 rock-salt-regular ">WEDDING Parties</h3>
+                            <h1 class="text-4xl font-bold border-b-3 inline border-[#ce1212] px-2 mb-3">$899</h1>
+                            <p class="mt-2 ">
+                                Laborum aperiam atque omnis minus omnis est qui assumenda quos. <br> Quis id sit
+                                quibusdam.
+                                Esse quisquam ducimus officia ipsum ut quibusdam maxime. Non enim perspiciatis.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="item4" class="carousel-item w-full">
+                <div class="hero w-full h-[450px] relative" style="background-image: url(./img/events-4.jpg);">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-content text-neutral-content absolute bottom-0 left-0 p-8">
+                        <div>
+                            <h3 class="text-md mb-3 rock-salt-regular ">BIRTHDAY Parties</h3>
+                            <h1 class="text-4xl font-bold border-b-3 inline border-[#ce1212] px-2 mb-3">$899</h1>
+                            <p class="mt-2 ">
+                                Laborum aperiam atque omnis minus omnis est qui assumenda quos. <br> Quis id sit
+                                quibusdam.
+                                Esse quisquam ducimus officia ipsum ut quibusdam maxime. Non enim perspiciatis.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex w-full justify-center gap-2 py-2">
+            <a href="#item1" class="btn btn-xs">1</a>
+            <a href="#item2" class="btn btn-xs">2</a>
+            <a href="#item3" class="btn btn-xs">3</a>
+            <a href="#item4" class="btn btn-xs">4</a>
+        </div>
+    </section>
+
+    <!-- chefs -->
+    <section class="chefs my-10">
+        <div class="w-[90%] mx-auto">
+            <div class="title text-center  mb-[50px]">
+                <p class="text-xl text-[#777] ">CHEF'S </p>
+                <h1 class="text-2xl  rock-salt-regular mt-3 ">Our<span class="text-[#ce1212]">Proffesional Chefs</span>
+                </h1>
+            </div>
+
+            <div class="flex justify-between justify-center gap-5 ">
+                <div class="card bg-base-100 w-96 shadow-sm chefs-card">
+                    <figure>
+                        <img src="./img/chefs/chefs-2.jpg" alt="Shoes" />
+                    </figure>
+                    <div class="card-body text-center">
+                        <h1 class="text-2xl font-bold">Sarah Jhonson</h1>
+                        <h4 class="text-lg text-[#555]">Patissier</h4>
+                        <p class="text-[#777]">Quo esse repellendus quia id. Est eum et accusantium pariatur fugit nihil
+                            minima suscipit corporis. Voluptate sed quas reiciendis animi neque sapiente.</p>
+                    </div>
+                    <div class=" flex flex-col gap-3 bg-[#ffffffdc] w-[40px] text-center py-2 chefs-social">
+                        <i class="fa-brands fa-facebook text-[#555]  text-xl hover:text-[#333]"></i>
+                        <i class="fa-brands fa-x-twitter text-[#555] text-xl  hover:text-[#333]"></i>
+                        <i class="fa-brands fa-linkedin text-[#555]  text-xl hover:text-[#333]"></i>
+                        <i class="fa-brands fa-instagram text-[#555] text-xl  hover:text-[#333]"></i>
+                    </div>
+                </div>
+                <div class="card bg-base-100 w-96 shadow-sm chefs-card">
+                    <figure>
+                        <img src="./img/chefs/chefs-3.jpg" alt="Shoes" />
+                    </figure>
+                    <div class="card-body text-center">
+                        <h1 class="text-2xl font-bold">William Anderson</h1>
+                        <h4 class="text-lg text-[#555]">Cook </h4>
+                        <p class="text-[#777]">Vero omnis enim consequatur. Voluptas consectetur unde qui molestiae
+                            deserunt. Voluptates enim aut architecto porro aspernatur molestiae modi.</p>
+                    </div>
+                    <div class=" flex flex-col gap-3 bg-[#ffffffdc] w-[40px] text-center py-2 chefs-social">
+                        <i class="fa-brands fa-facebook text-[#555]  text-xl hover:text-[#333]"></i>
+                        <i class="fa-brands fa-x-twitter text-[#555] text-xl  hover:text-[#333]"></i>
+                        <i class="fa-brands fa-linkedin text-[#555]  text-xl hover:text-[#333]"></i>
+                        <i class="fa-brands fa-instagram text-[#555] text-xl  hover:text-[#333]"></i>
+                    </div>
+                </div>
+                <div class="card bg-base-100 w-96 shadow-sm chefs-card">
+                    <figure>
+                        <img src="./img/chefs/chefs-1.jpg" alt="Shoes" />
+                    </figure>
+                    <div class="card-body text-center">
+                        <h1 class="text-2xl font-bold">Walter White
+                        </h1>
+                        <h4 class="text-lg text-[#555]">Master Chef
+                        </h4>
+                        <p class="text-[#777]">Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa
+                            quae aut. Ipsum
+                            exercitationem iure minima enim corporis et voluptate.
+
+                        </p>
+                    </div>
+                    <div class=" flex flex-col gap-3 bg-[#ffffffdc] w-[40px] text-center py-2 chefs-social">
+                        <i class="fa-brands fa-facebook text-[#555]  text-xl hover:text-[#333]"></i>
+                        <i class="fa-brands fa-x-twitter text-[#555] text-xl  hover:text-[#333]"></i>
+                        <i class="fa-brands fa-linkedin text-[#555]  text-xl hover:text-[#333]"></i>
+                        <i class="fa-brands fa-instagram text-[#555] text-xl  hover:text-[#333]"></i>
+                    </div>
+                </div>
+            </div>
     </section>
 </body>
 
