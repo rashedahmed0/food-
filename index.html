@@ -13,6 +13,7 @@
 
     <!-- google font  -->
     <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" class="text-[50px]" href="./img/fac.png" type="image/x-icon">
     <style>
         .rock-salt-regular {
             font-family: "Rock Salt", cursive;
@@ -66,6 +67,10 @@
 
         .shadow {
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+        .active {
+            background: #cbcbcb;
         }
     </style>
 
@@ -262,6 +267,147 @@
                 <div class="flex-grow text-white text-center">
                     <p class="text-3xl font-semibold ">32</p>
                     <p class="text-2xl font-semibold ">Workers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- menu section  -->
+    <section class="food-menu my-10">
+        <div class="w-[90%] mx-auto">
+            <div class="title text-center  mb-[50px]">
+                <p class="text-xl text-[#777] ">Our Menu </p>
+                <h1 class="text-2xl  rock-salt-regular mt-3 ">Check Our <span class="text-[#ce1212]">Yummy Menu</span>
+                </h1>
+            </div>
+
+
+            <div class="">
+                <div class="filter-button text-center">
+                    <button data-name="all" class="btn  active">All</button>
+                    <button data-name="breakfast" class="btn ">Breakfast</button>
+                    <button data-name="lunch" class="btn ">Lunch</button>
+                    <button data-name="dinner" class="btn ">Dinner</button>
+                </div>
+
+                <div class="filterable-card grid grid-cols-3 mt-10 gap-5">
+                    <div class=" mt-5 card bg-base-100 w-96 shadow-sm" data-name="breakfast">
+                        <figure class="px-10 pt-10">
+                            <img src="./img/menu/breckfast (1).png" alt="Shoes" class="rounded-xl  w-[200px] " />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title text-3xl font-bold">Breakfast item 1</h2>
+                            <p>Lorem, ipsum dolor.</p>
+                            <p class="text-[#ce1212] text-2xl font-bold "><span>120</span>$</p>
+                            <div class="card-actions">
+                                <button class="btn ">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" mt-5 card bg-base-100 w-96 shadow-sm" data-name="breakfast">
+                        <figure class="px-10 pt-10">
+                            <img src="./img/menu/breckfast (2).png" alt="Shoes" class="rounded-xl  w-[200px] " />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title text-3xl font-bold">Breakfast item 2</h2>
+                            <p>Lorem, ipsum dolor.</p>
+                            <p class="text-[#ce1212] text-2xl font-bold "><span>60</span>$</p>
+                            <div class="card-actions">
+                                <button class="btn ">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" mt-5 card bg-base-100 w-96 shadow-sm" data-name="breakfast">
+                        <figure class="px-10 ">
+                            <img src="./img/menu/breckfast (3).png" alt="Shoes" class="rounded-xl w-[250px] " />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title text-3xl font-bold">Breakfast item 3</h2>
+                            <p>Lorem, ipsum dolor.</p>
+                            <p class="text-[#ce1212] text-2xl font-bold "><span>30</span>$</p>
+                            <div class="card-actions">
+                                <button class="btn ">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" mt-5 card bg-base-100 w-96 shadow-sm" data-name="lunch">
+                        <figure class="px-10 ">
+                            <img src="./img/menu/lunch (1).png" alt="Shoes" class="rounded-xl w-[200px]" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title text-3xl font-bold">Lunch item 1</h2>
+                            <p>Lorem, ipsum dolor.</p>
+                            <p class="text-[#ce1212] text-2xl font-bold "><span>260</span>$</p>
+                            <div class="card-actions">
+                                <button class="btn ">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" mt-5 card bg-base-100 w-96 shadow-sm" data-name="lunch">
+                        <figure class="px-10 ">
+                            <img src="./img/menu/lunch (2).png" alt="Shoes" class="rounded-xl w-[200px]" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title text-3xl font-bold">Lunch item 2</h2>
+                            <p>Lorem, ipsum dolor.</p>
+                            <p class="text-[#ce1212] text-2xl font-bold "><span>280</span>$</p>
+                            <div class="card-actions">
+                                <button class="btn ">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" mt-5 card bg-base-100 w-96 shadow-sm" data-name="lunch">
+                        <figure class="px-10 ">
+                            <img src="./img/menu/lunch (3).png" alt="Shoes" class="rounded-xl w-[200px] " />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title text-3xl font-bold">Lunch item 3</h2>
+                            <p>Lorem, ipsum dolor.</p>
+                            <p class="text-[#ce1212] text-2xl font-bold "><span>320</span>$</p>
+                            <div class="card-actions">
+                                <button class="btn ">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" mt-5 card bg-base-100 w-96 shadow-sm" data-name="dinner">
+                        <figure class="px-10 ">
+                            <img src="./img/menu/dinner (1).png" alt="Shoes" class="rounded-xl w-[200px]" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title text-3xl font-bold">Lunch item 1</h2>
+                            <p>Lorem, ipsum dolor.</p>
+                            <p class="text-[#ce1212] text-2xl font-bold "><span>120</span>$</p>
+                            <div class="card-actions">
+                                <button class="btn ">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" mt-5 card bg-base-100 w-96 shadow-sm" data-name="dinner">
+                        <figure class="px-10 ">
+                            <img src="./img/menu/dinner (2).png" alt="Shoes" class="rounded-xl w-[200px] " />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title text-3xl font-bold">Lunch item 2</h2>
+                            <p>Lorem, ipsum dolor.</p>
+                            <p class="text-[#ce1212] text-2xl font-bold "><span>420</span>$</p>
+                            <div class="card-actions">
+                                <button class="btn ">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" mt-5 card bg-base-100 w-96 shadow-sm" data-name="dinner">
+                        <figure class="px-10 ">
+                            <img src="./img/menu/dinner (3).png" alt="Shoes" class="rounded-xl w-[200px] " />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title text-3xl font-bold">Lunch item 3</h2>
+                            <p>Lorem, ipsum dolor.</p>
+                            <p class="text-[#ce1212] text-2xl font-bold "><span>350</span>$</p>
+                            <div class="card-actions">
+                                <button class="btn ">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -671,6 +817,67 @@
             </div>
         </div>
     </section>
+
+    <!-- footer section -->
+
+    <footer class="footer sm:footer-horizontal text-white bg-[#1f1f24] p-10">
+        <nav class="flex items-start">
+            <span><i class="mt-1 fa-solid fa-location-dot text-2xl text-[#ce1212]"></i></span>
+            <div class="">
+                <h1 class="text-xl mb-3 font-semibold ">Address</h1>
+                <p>A108 Adam Street</p>
+                <p>New York, NY 535022 </p>
+            </div>
+        </nav>
+        <nav class="flex items-start">
+            <span><i class="mt-1 fa-solid fa-phone text-2xl text-[#ce1212]"></i></span>
+            <div class="">
+                <h1 class="text-xl mb-3 font-semibold ">Contact</h1>
+                <p>Phone: 01407707709</p>
+                <p>Email: rashedahommod0@gmail.com</p>
+            </div>
+        </nav>
+        <nav class="flex items-start">
+            <span><i class="mt-1 fa-solid fa-clock  text-2xl text-[#ce1212]"></i></span>
+            <div class="">
+                <h1 class="text-xl mb-3 font-semibold ">
+                    Opening Hours</h1>
+                <p>Mon-Sat: 11AM - 23PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+        </nav>
+        <nav class="">
+            <h1 class="text-xl mb-3 font-semibold">Follow me </h1>
+            <div class=" text-2xl ">
+                <span><a href=""><i style="transition: o.3s;"
+                            class="hover:text-[#ce1212] fa-brands fa-square-x-twitter"></i></a></span>
+                <span><a href=""><i style="transition: o.3s;"
+                            class="hover:text-[#ce1212] fa-brands fa-facebook"></i></a></span>
+                <span><a href=""><i style="transition: o.3s;"
+                            class="hover:text-[#ce1212] fa-brands fa-linkedin"></i></a></span>
+            </div>
+        </nav>
+    </footer>
+    <hr>
+    <footer class="footer sm:footer-horizontal footer-center text-white bg-[#1f1f24]  p-4">
+        <aside>
+            <p>Copyright © 17/03/2025 - All right reserved by Rashed Ahommod</p>
+        </aside>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./script.js"></script>
 </body>
 
 </html>
