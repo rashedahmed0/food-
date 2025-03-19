@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy</title>
+    <!-- tailwind & daisyUi -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- fontAwesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- google font  -->
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" class="text-[50px]" href="./img/fac.png" type="image/x-icon">
+    <style>
+        .rock-salt-regular {
+            font-family: "Rock Salt", cursive;
+            /* font-weight: 400; */
+            font-style: normal;
+        }
+
+        .brand-card:hover span {
+            background: #ce1212;
+            background: #ffe9e9;
+            /* color: #ffffffdc; */
+            transition: 0.5s;
+        }
+
+        .brand-card:hover i {
+            color: white;
+            transition: 0.5s;
+            /* background: #ce1212; */
+        }
+
+        .brand-card:hover span {
+
+            transition: 0.5s;
+            background: #ce1212;
+        }
+
+        .chefs-card {
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .chefs-card:hover {
+            transform: scale(1.05);
+        }
+
+        .chefs-card:hover .chefs-social {
+            opacity: 1;
+            visibility: visible;
+            right: 15px;
+            top: 15px;
+        }
+
+        .chefs-social {
+            transition: right 0.4s;
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .shadow {
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+        .active {
+            background: #cbcbcb;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- header section -->
+    <header class="shadow-sm">
+        <div class="navbar flex justify-between w-[90%] mx-auto  ">
+            <div class="flex flex-row-reverse w-full lg:w-[20%] justify-between items-center ">
+                <div class="dropdown flex justify-end flex-row-reverse items-center">
+
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-[275px] w-52 p-2 shadow absulate right-0">
+                        <li><a>Home </a></li>
+                        <li><a>About</a></li>
+                        <li><a>Menu </a></li>
+                        <li><a>Event</a></li>
+                        <li><a>Chef's</a></li>
+                        <li><a>Contact</a></li>
+                        <button class=" lg:hidden flex py-2 px-5  rounded-3xl text-md text-white bg-[#ce1212]">Book
+                            a
+                            Table</button>
+                    </ul>
+                </div>
+                <a class="text-3xl font-bold">YUMMY <span class="text-[#ce1212]">.</span></a>
+            </div>
+            <div class="hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a class="text-md mx-3">Home </a></li>
+                    <li><a class="text-md mx-3">About</a></li>
+                    <li><a class="text-md mx-3">Menu </a></li>
+                    <li><a class="text-md mx-3">Event</a></li>
+                    <li><a class="text-md mx-3">Chef's</a></li>
+                    <li><a class="text-md mx-3">Contact</a></li>
+
+                </ul>
+            </div>
+            <button class="hidden lg:flex py-2 px-9 rounded-3xl text-lg text-white bg-[#ce1212]">Book a Table</button>
+
+        </div>
+    </header>
+    <!-- banner section  -->
+    <section class="banner py-[100px] bg-[#f2f2f2]">
+        <div class="w-[90%] mx-auto  ">
+            <div class="flex justify-between flex-col md:flex-row items-center ">
+                <div class="basis-[40%]">
+                    <h1 style="line-height: 55px;" class="rock-salt-regular text-4xl text-[#333] font-semibold mb-5">
+                        Food Menu</h1>
+                    <p class="text-lg text-[#777] mb-5">Savor nutritious, flavorful meals that nourish your body and
+                        delight your taste
+                        buds.
+                    </p>
+                    <button style="transition: 0.5s;"
+                        class="mb-3  py-2 px-9 rounded-3xl text-lg text-white bg-[#ce1212] border-2 border-[#ce1212] hover:bg-white hover:text-[#ce1212]">Book
+                        a
+                        Table </button>
+                    <button style="transition: 0.5s;"
+                        class="mb-10  py-2 px-9 rounded-3xl text-lg text-[#ce1212] border-2 border-[#ce1212] hover:bg-[#ce1212] hover:text-white ">Menu</button>
+                </div>
+                <div class="basis-[45%]">
+                    <!-- <img src="./img/hero-img.png" alt=""> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- menu section  -->
+    <section class="food-menu my-10">
+        <div class="w-[90%] mx-auto">
+            <div class="title text-center  mb-[50px]">
+                <p class="text-xl text-[#777] ">Our Menu </p>
+                <h1 class="text-2xl  rock-salt-regular mt-3 ">Check Our <span class="text-[#ce1212]">Yummy Menu</span>
+                </h1>
+            </div>
+
+
+            <div class="">
+                <div class="filter-button text-center">
+                    <button data-name="all" class="btn  active">All</button>
+                    <button data-name="breakfast" class="btn ">Breakfast</button>
+                    <button data-name="lunch" class="btn ">Lunch</button>
+                    <button data-name="dinner" class="btn ">Dinner</button>
+                </div>
+                <div class="drawer z-40 ">
+                    <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+                    <div class="drawer-content flex justify-center mt-5">
+                        <!-- Page content here -->
+                        <label for="my-drawer" class="btn drawer-button bg-[#ce1212]"><i
+                                class="fa-solid fa-cart-shopping text-2xl text-white  "></i></label>
+                    </div>
+                    <div class="drawer-side">
+                        <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+                        <div class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
+
+                            <div class="title">
+                                <h1 class="text-2xl text-[#ce1212] font-semibold">Food item </h1>
+                                <p>Lorem ipsum dolor sit amet.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filterable-card grid lg:grid-cols-3 grid-cols-1  mt-10 gap-5">
+                    <div class=" mt-5 card bg-base-100  shadow-sm" data-name="breakfast">
+                        <figure class="px-10 pt-10">
+                            <img src="./img/menu/breckfast (1).png" alt="Shoes" class="rounded-xl  w-[200px] " />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title text-3xl font-bold">Breakfast item 1</h2>
+                            <p>Lorem, ipsum dolor.</p>
+                            <p class="text-[#ce1212] text-2xl font-bold "><span>120</span>$</p>
+                            <div class="card-actions">
+                                <button class="btn ">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" mt-5 card bg-base-100  shadow-sm" data-name="breakfast">
+                        <figure class="px-10 pt-10">
+                            <img src="./img/menu/breckfast (2).png" alt="Shoes" class="rounded-xl  w-[200px] " />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title text-3xl font-bold">Breakfast item 2</h2>
+                            <p>Lorem, ipsum dolor.</p>
+                            <p class="text-[#ce1212] text-2xl font-bold "><span>60</span>$</p>
+                            <div class="card-actions">
+                                <button class="btn ">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" mt-5 card bg-base-100  shadow-sm" data-name="breakfast">
+                        <figure class="px-10 ">
+                            <img src="./img/menu/breckfast (3).png" alt="Shoes" class="rounded-xl w-[250px] " />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title text-3xl font-bold">Breakfast item 3</h2>
+                            <p>Lorem, ipsum dolor.</p>
+                            <p class="text-[#ce1212] text-2xl font-bold "><span>30</span>$</p>
+                            <div class="card-actions">
+                                <button class="btn ">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" mt-5 card bg-base-100  shadow-sm" data-name="lunch">
+                        <figure class="px-10 ">
+                            <img src="./img/menu/lunch (1).png" alt="Shoes" class="rounded-xl w-[200px]" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title text-3xl font-bold">Lunch item 1</h2>
+                            <p>Lorem, ipsum dolor.</p>
+                            <p class="text-[#ce1212] text-2xl font-bold "><span>260</span>$</p>
+                            <div class="card-actions">
+                                <button class="btn ">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" mt-5 card bg-base-100  shadow-sm" data-name="lunch">
+                        <figure class="px-10 ">
+                            <img src="./img/menu/lunch (2).png" alt="Shoes" class="rounded-xl w-[200px]" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title text-3xl font-bold">Lunch item 2</h2>
+                            <p>Lorem, ipsum dolor.</p>
+                            <p class="text-[#ce1212] text-2xl font-bold "><span>280</span>$</p>
+                            <div class="card-actions">
+                                <button class="btn ">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" mt-5 card bg-base-100  shadow-sm" data-name="lunch">
+                        <figure class="px-10 ">
+                            <img src="./img/menu/lunch (3).png" alt="Shoes" class="rounded-xl w-[200px] " />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title text-3xl font-bold">Lunch item 3</h2>
+                            <p>Lorem, ipsum dolor.</p>
+                            <p class="text-[#ce1212] text-2xl font-bold "><span>320</span>$</p>
+                            <div class="card-actions">
+                                <button class="btn ">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" mt-5 card bg-base-100  shadow-sm" data-name="dinner">
+                        <figure class="px-10 ">
+                            <img src="./img/menu/dinner (1).png" alt="Shoes" class="rounded-xl w-[200px]" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title text-3xl font-bold">Lunch item 1</h2>
+                            <p>Lorem, ipsum dolor.</p>
+                            <p class="text-[#ce1212] text-2xl font-bold "><span>120</span>$</p>
+                            <div class="card-actions">
+                                <button class="btn ">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" mt-5 card bg-base-100  shadow-sm" data-name="dinner">
+                        <figure class="px-10 ">
+                            <img src="./img/menu/dinner (2).png" alt="Shoes" class="rounded-xl w-[200px] " />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title text-3xl font-bold">Lunch item 2</h2>
+                            <p>Lorem, ipsum dolor.</p>
+                            <p class="text-[#ce1212] text-2xl font-bold "><span>420</span>$</p>
+                            <div class="card-actions">
+                                <button class="btn ">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" mt-5 card bg-base-100  shadow-sm" data-name="dinner">
+                        <figure class="px-10 ">
+                            <img src="./img/menu/dinner (3).png" alt="Shoes" class="rounded-xl w-[200px] " />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title text-3xl font-bold">Lunch item 3</h2>
+                            <p>Lorem, ipsum dolor.</p>
+                            <p class="text-[#ce1212] text-2xl font-bold "><span>350</span>$</p>
+                            <div class="card-actions">
+                                <button class="btn ">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer section -->
+
+    <footer class="footer sm:footer-horizontal text-white bg-[#1f1f24] p-10">
+        <nav class="flex items-start">
+            <span><i class="mt-1 fa-solid fa-location-dot text-2xl text-[#ce1212]"></i></span>
+            <div class="">
+                <h1 class="text-xl mb-3 font-semibold ">Address</h1>
+                <p>A108 Adam Street</p>
+                <p>New York, NY 535022 </p>
+            </div>
+        </nav>
+        <nav class="flex items-start">
+            <span><i class="mt-1 fa-solid fa-phone text-2xl text-[#ce1212]"></i></span>
+            <div class="">
+                <h1 class="text-xl mb-3 font-semibold ">Contact</h1>
+                <p>Phone: 01407707709</p>
+                <p>Email: rashedahommod0@gmail.com</p>
+            </div>
+        </nav>
+        <nav class="flex items-start">
+            <span><i class="mt-1 fa-solid fa-clock  text-2xl text-[#ce1212]"></i></span>
+            <div class="">
+                <h1 class="text-xl mb-3 font-semibold ">
+                    Opening Hours</h1>
+                <p>Mon-Sat: 11AM - 23PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+        </nav>
+        <nav class="">
+            <h1 class="text-xl mb-3 font-semibold">Follow me </h1>
+            <div class=" text-2xl ">
+                <span><a href=""><i style="transition: o.3s;"
+                            class="hover:text-[#ce1212] fa-brands fa-square-x-twitter"></i></a></span>
+                <span><a href=""><i style="transition: o.3s;"
+                            class="hover:text-[#ce1212] fa-brands fa-facebook"></i></a></span>
+                <span><a href=""><i style="transition: o.3s;"
+                            class="hover:text-[#ce1212] fa-brands fa-linkedin"></i></a></span>
+            </div>
+        </nav>
+    </footer>
+    <hr>
+    <footer class="footer sm:footer-horizontal footer-center text-white bg-[#1f1f24]  p-4">
+        <aside>
+            <p>Copyright © 17/03/2025 - All right reserved by Rashed Ahommod</p>
+        </aside>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        let filterButton = document.querySelectorAll(".filter-button  button");
+        let filterableCard = document.querySelectorAll(".filterable-card .card")
+        console.log(filterButton);
+        console.log(filterableCard);
+
+        let filterCard = (e) => {
+            // add here active functionality 
+            document.querySelector(".active").classList.remove('active');
+            e.target.classList.add('active')
+
+            filterableCard.forEach(card => {
+                card.classList.add('hidden');
+
+                if (card.dataset.name === e.target.dataset.name || e.target.dataset.name === 'all') {
+                    card.classList.remove('hidden');
+
+                }
+            })
+
+        };
+
+
+        // add click event in all buttons 
+        filterButton.forEach(button => button.addEventListener('click', filterCard))
+    </script>
+</body>
+
+</html>
