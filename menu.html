@@ -179,16 +179,19 @@
                                 <p>Lorem ipsum dolor sit amet.</p>
                             </div>
                             <div class="items">
-                                <div class="flex justify-between items-center">
-                                    <img src="./img/menu/dinner (1).png" alt="" class=" w-[75px]">
-                                    <h3 class="text-md font-semibold text-[#777]">item name </h3>
-                                    <p class="text-md font-semibold text-[#777]">0.00</p>
+                                <div id="product-section">
+                                    <!--                                     
+                                    <div class="flex justify-between items-center">
+                                        <img src="./img/menu/dinner (1).png" alt="" class="w-[75px]">
+                                        <h3 class="text-md font-semibold text-[#777]">item name</h3>
+                                        <p class="text-md font-semibold text-[#777]">0.00$</p>
+                                    </div> -->
                                 </div>
                             </div>
-                            <div class="total absolute bottom-[10px] w-[90%]">
+                            <div class="total mt-5">
                                 <div class=" flex justify-between items-center border-2 border-[#555] p-3 ">
                                     <h1 class="text-xl font-semibold ">Total</h1>
-                                    <p class=" texxt-[#555]">$ <span>0.00</span></p>
+                                    <p><span id="total">0.00</span>$</p>
                                 </div>
                                 <a href="" style="    display: block;
                                 text-align: center;
@@ -244,7 +247,9 @@
                             <p>Lorem, ipsum dolor.</p>
                             <p class="text-[#ce1212] text-2xl font-bold "><span id="product-price-3">30</span>$</p>
                             <div class="card-actions">
-                                <button class="btn " onclick="addItem()">Buy Now</button>
+                                <button class="btn "
+                                    onclick="addItem('product-img-3' , 'product-title-3', 'product-price-3' )">Buy
+                                    Now</button>
                             </div>
                         </div>
                     </div>
@@ -258,7 +263,9 @@
                             <p>Lorem, ipsum dolor.</p>
                             <p class="text-[#ce1212] text-2xl font-bold "><span id="product-price-4">260</span>$</p>
                             <div class="card-actions">
-                                <button class="btn " onclick="addItem()">Buy Now</button>
+                                <button class="btn "
+                                    onclick="addItem('product-img-4' , 'product-title-4', 'product-price-4' )">Buy
+                                    Now</button>
                             </div>
                         </div>
                     </div>
@@ -271,9 +278,9 @@
                             <h2 class="card-title text-3xl font-bold" id="product-title-5">Lunch item 2</h2>
                             <p>Lorem, ipsum dolor.</p>
                             <p class="text-[#ce1212] text-2xl font-bold "><span id="product-price-5">280</span>$</p>
-                            <div class="card-actions">
-                                <button class="btn " onclick="addItem()">Buy Now</button>
-                            </div>
+                            <button class="btn "
+                                onclick="addItem('product-img-5' , 'product-title-5', 'product-price-5' )">Buy
+                                Now</button>
                         </div>
                     </div>
                     <div class=" mt-5 card bg-base-100  shadow-sm" data-name="lunch">
@@ -286,7 +293,9 @@
                             <p>Lorem, ipsum dolor.</p>
                             <p class="text-[#ce1212] text-2xl font-bold "><span id="product-price-6">320</span>$</p>
                             <div class="card-actions">
-                                <button class="btn " onclick="addItem()">Buy Now</button>
+                                <button class="btn "
+                                    onclick="addItem('product-img-6' , 'product-title-6', 'product-price-6' )">Buy
+                                    Now</button>
                             </div>
                         </div>
                     </div>
@@ -300,7 +309,9 @@
                             <p>Lorem, ipsum dolor.</p>
                             <p class="text-[#ce1212] text-2xl font-bold "><span id="product-price-7">120</span>$</p>
                             <div class="card-actions">
-                                <button class="btn " onclick="addItem()">Buy Now</button>
+                                <button class="btn "
+                                    onclick="addItem('product-img-7' , 'product-title-7', 'product-price-7' )">Buy
+                                    Now</button>
                             </div>
                         </div>
                     </div>
@@ -314,7 +325,9 @@
                             <p>Lorem, ipsum dolor.</p>
                             <p class="text-[#ce1212] text-2xl font-bold "><span id="product-price-8">420</span>$</p>
                             <div class="card-actions">
-                                <button class="btn " onclick="addItem()">Buy Now</button>
+                                <button class="btn "
+                                    onclick="addItem('product-img-8' , 'product-title-8', 'product-price-8' )">Buy
+                                    Now</button>
                             </div>
                         </div>
                     </div>
@@ -328,7 +341,9 @@
                             <p>Lorem, ipsum dolor.</p>
                             <p class="text-[#ce1212] text-2xl font-bold "><span id="product-price-9">350</span>$</p>
                             <div class="card-actions">
-                                <button class="btn " onclick="addItem()">Buy Now</button>
+                                <button class="btn "
+                                    onclick="addItem('product-img-9' , 'product-title-9', 'product-price-9' )">Buy
+                                    Now</button>
                             </div>
                         </div>
                     </div>
@@ -427,15 +442,38 @@
 
 
 
-
-
-        // add cart section
         function addItem(productImg, productTitle, productPrice) {
-            let Img = document.getElementById(productImg).innerText;
+            // Get the image source, title, and price from the DOM
+            let Img = document.getElementById(productImg).src;
             let Title = document.getElementById(productTitle).innerText;
-            let Price = document.getElementById(productPrice).innerText;
-            console.log(Img, Title, Price);
+            let Price = parseFloat(document.getElementById(productPrice).innerText);
+
+            // Log the values for debugging
+            // console.log(Img, Title, typeof (Price));
+
+            // Get the product section where the new item will be added
+            let productSection = document.getElementById('product-section');
+
+            // Create a new div element and set its inner HTML
+            let div = document.createElement('div');
+            div.classList.add('flex', 'justify-between', 'items-center', 'mt-4'); // Add the necessary classes
+            div.innerHTML = `
+        <img src="${Img}" alt="" class="w-[75px]">
+        <h3 class="text-md font-semibold text-[#777]">${Title}</h3>
+        <p class="text-md font-semibold text-[#777]">${Price}$</p>
+    `;
+
+            // Append the new div to the product section
+            productSection.appendChild(div);
+
+            let totalElement = document.getElementById("total");
+            let totalPrice = parseFloat(totalElement.innerText) || 0;
+            let newTotalPrice = totalPrice + Price;
+            totalElement.innerText = newTotalPrice.toFixed(2);
+
+
         }
+
     </script>
 </body>
 
